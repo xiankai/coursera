@@ -18,6 +18,7 @@ function readLine (line) {
 
 	if (lineN === 2) {
 		ints = line.toString().split(' ');
+		ints = ints.map(parseFloat);
 	}
 
 	lineN++;
@@ -26,7 +27,6 @@ function readLine (line) {
 const getHighest = arr => {
 	let highest = 0;
 	arr.forEach(n => {
-		n = parseFloat(n);
 		if (n > highest) {
 			highest = n;
 		}
